@@ -1,1 +1,9 @@
-トップ画面
+<% unless current_user.full_profile? %>
+  <header>
+    <h2>まずは、あなたの基本プロフィールを登録しましょう！</h2>
+    <p>さて、どの山に登ろうか？　ユーザー同士で山の生情報を共有しよう</p>
+    <%= link_to "プロフィールを登録する", edit_user_path(current_user) %>
+  </header>
+<% else %>
+
+<% end %>

@@ -1,4 +1,6 @@
 <h2><%= @user.name %><span><%= @user.name_kana %></span></h2>
+<!-- <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div> -->
+ <%= image_tag @user.avatar.url(:medium) %>
   <% if current_user.id == @user.id %>
       <%= link_to "プロフィール編集", edit_user_path(current_user) %>
   <% end %>
