@@ -1,1 +1,4 @@
-<%= @user.email %>のユーザーページです。
+<h2>ユーザーページです
+    <%= "#{@user.family_name}#{@user.first_name}" %><br>
+    <span><%= "#{@user.family_name_kana}#{@user.first_name_kana}" %></span>
+</h2>
