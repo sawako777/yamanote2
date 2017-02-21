@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @tweets = Tweet.all
+    @pots = Post.all
   end
 
   def new
