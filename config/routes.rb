@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "top#index"
   get 'posts'        => 'posts#index'
   get 'posts/new'    => 'posts#new'
+  post 'posts'       => 'posts#create'
 end
