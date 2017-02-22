@@ -9,6 +9,7 @@
     <body>
     <% @posts.each do |post| %>
       <p><%= post.text %></p>
+      <p><%= image_tag @post.image.url(:medium) %></p>
     <% end %>
     </body>
   </html>
