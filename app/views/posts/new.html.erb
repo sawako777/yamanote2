@@ -6,7 +6,9 @@
       <%= f.label :image %><br>
       <%= f.file_field :image %>
     </div>
-    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+    <div class="field">
+    <%= f.text_area :text, row: '10', cols: '30' %>
+    </div>
     <input type="submit" value="SENT">
   <% end %>
 </div>

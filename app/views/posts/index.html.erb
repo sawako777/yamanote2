@@ -8,8 +8,8 @@
     </head>
     <body>
     <% @posts.each do |post| %>
-      <p><%= post.text %></p>
       <p><%= image_tag post.image.url(:medium) %></p>
+      <p><%= post.text %></p><br>
     <% end %>
     </body>
   </html>
