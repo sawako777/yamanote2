@@ -1,5 +1,19 @@
-<h2><%= @user.name %><span><%= @user.name_kana %></span></h2>
-<!-- <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div> -->
- <%= image_tag @user.avatar.url(:medium) %>
-  <% if current_user.id == @user.id %>
-  <% end %>
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Yamanote</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+    </head>
+    <body>
+<% if current_user.id == @user.id %>
+  <h2><%= @user.name %><span><%= @user.name_kana %></span></h2>
+  <%= image_tag @user.avatar.url(:medium) %>
+    <% @posts.each do |post| %>
+    <%= image_tag post.image.url(:medium) %>
+    <%= post.text %>
+    <% end %>
+<% end %>
+    </body>
+</html>
