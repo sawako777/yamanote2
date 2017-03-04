@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class YamanameControllerTest < ActionController::TestCase
+class YamanameTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
