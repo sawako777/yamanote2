@@ -1,0 +1,2 @@
+class YamanamesController < ApplicationController
+end

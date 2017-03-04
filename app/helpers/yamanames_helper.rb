@@ -1,0 +1,2 @@
+module YamanamesHelper
+end
