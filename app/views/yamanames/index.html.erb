@@ -1,3 +1,3 @@
 <% @mountain_names.each do |yamanames| %>
-      <p><%= yamanames.mountain_name %></p>
+  <p><%= link_to yamanames.mountain_name, yamanames_path(current_user) %></p>
 <% end %>
