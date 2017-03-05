@@ -1,3 +1,3 @@
-<% @mountain_names.each do |yamanames| %>
-  <p><%= link_to yamanames.mountain_name, yamanames_path(current_user) %></p>
+<% @yamanames.each do |yamanames| %>
+  <a href="/yamanames/<%= yamanames.id %>"><%= yamanames.mountain_name %></a>
 <% end %>

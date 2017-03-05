@@ -1,9 +1,10 @@
 class YamanamesController < ApplicationController
   def index
-    @mountain_names = Yamaname.all
+    @yamanames = Yamaname.all
   end
 
   def show
+    @yamaname = Yamaname.find(params[:id])
   end
   
 end
