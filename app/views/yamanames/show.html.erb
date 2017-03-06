@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
   <h2><%= @yamaname.mountain_name %></h2>
-  <li><%= link_to "投稿する", posts_new_path(current_user) %></li>
+  <a href="/yamanames/<%= @yamaname.id %>/posts/new">投稿する</a>
 
 <% end %>

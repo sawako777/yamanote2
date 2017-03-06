@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   root to: "posts#index"
-  get 'posts'        => 'posts#index'
-  get 'posts/new'    => 'posts#new'
-  post 'posts'       => 'posts#create'
-  resources :yamanames
+  resources :yamanames do
+    resources :posts
+    collection do
+      get 'search'
+    end
+  end
 end
