@@ -2,5 +2,8 @@
 
   <h2><%= @yamaname.mountain_name %></h2>
   <a href="/yamanames/<%= @yamaname.id %>/posts/new">投稿する</a>
-
+  <% @yamaname.posts.each do |post| %>
+      <p><%= image_tag post.image.url(:medium) %></p>
+      <p><%= post.text %></p><br>
+  <% end %>
 <% end %>

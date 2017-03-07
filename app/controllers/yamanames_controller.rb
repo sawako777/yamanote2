@@ -5,6 +5,7 @@ class YamanamesController < ApplicationController
 
   def show
     @yamaname = Yamaname.find(params[:id])
+    @posts = Post.find(params[:id])
   end
   
 end
