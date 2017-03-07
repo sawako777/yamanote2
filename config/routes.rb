@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   resources :users
   root to: "posts#index"
   resources :yamanames do
-    resources :posts
-    collection do
-      get 'search'
+    resources :posts do
+      resources :comments, only: [:create]
     end
   end
 end
